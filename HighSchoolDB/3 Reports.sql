@@ -15,7 +15,7 @@ WHERE TuitionReceived = 15000;
 -- 3. Show a list of girls who have at least one sister in school with them
 select s.LastName as SistersInSchool
 from Students s
-group by s.LastName
+group by s.LastName, s.Address
 having count(*) > 1
 
 
